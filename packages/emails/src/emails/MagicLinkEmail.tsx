@@ -32,17 +32,17 @@ export const MagicLinkEmail = ({ url }: Props) => (
       </MjmlSection>
       <MjmlSection padding="0 24px" cssClass="smooth">
         <MjmlColumn>
-          <Text>Here is your magic link 👇</Text>
+          <Text>Aqui está seu link mágico 👇</Text>
           <MjmlSpacer />
           <Button link={url} align="center">
-            Click here to sign in
+            Clique aqui para realizar o login.
           </Button>
           <Text>
-            If you didn&apos;t request this, please ignore this email.
+            Se você não solicitou, ignore esse e-mail.
           </Text>
           <Text>
             Best,
-            <br />- Typebot Team.
+            <br />- Equipe Systemize.
           </Text>
         </MjmlColumn>
       </MjmlSection>
@@ -56,6 +56,6 @@ export const sendMagicLinkEmail = ({
 }: Pick<SendMailOptions, "to"> & ComponentProps<typeof MagicLinkEmail>) =>
   sendEmail({
     to,
-    subject: "Sign in to Typebot",
+    subject: "Entre no Typebot Systemize",
     html: render(<MagicLinkEmail {...props} />).html,
   });
